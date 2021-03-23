@@ -1,38 +1,89 @@
+.Container {
+  width: '100%';
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  max-width: 500px;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Radio-Button-Image {
+  width: 120px;
+  height: 120px;
+  border-radius: 5px;
 }
 
 .App-logo {
-  height: 40vmin;
+  width: '100%';
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.title {
+  display: flex;
+  width: '100%';
+  height: 70px;
+  background-color: black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.subtitle {
+  display: flex;
+  width: '100%';
+  height: 70px;
+  background-color: #e1e8e8;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+.oldPrize {
+  text-decoration: line-through;
+  margin-right: 10px;
+}
+
+.newPrize {
+  font-weight: bold;
+}
+
+.radioButtonText {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+.radioTextContainer {
+  display: flex;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.info {
+  display: flex;
+  width: '100%';
+  height: 70px;
+  background-color: #e1e8e8;
+  text-align: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.footer {
+  display: flex;
+  width: '100%';
+  height: 70px;
+  background-color: #e1e8e8;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
