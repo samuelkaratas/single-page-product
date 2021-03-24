@@ -1,13 +1,13 @@
 import React, { useState, useRef } from "react";
 
-import productImage1 from "./assets/fixo1.jpg";
+import productImage1 from "./assets/fixo5.jpg";
 import productImage2 from "./assets/fixo2.jpg";
 import productImage3 from "./assets/fixo3.jpg";
 import productImage4 from "./assets/fixo4.jpg";
-import productImage6 from "./assets/fixo6.jpg";
+import productImage5 from "./assets/fixo1.jpg";
+import productImage6 from "./assets/fixo8.jpg";
 import productImage7 from "./assets/fixo7.jpg";
-import productImage8 from "./assets/fixo8.jpg";
-import productImage9 from "./assets/fixo9.jpg";
+import productImage8 from "./assets/fixo6.jpg";
 
 import footerImage from "./assets/footer.png";
 
@@ -21,7 +21,7 @@ import Modal from "react-bootstrap/Modal";
 
 import { Badge } from "react-bootstrap";
 
-import { CheckCircle } from "react-feather";
+import { CheckCircle, Circle, ShoppingCart } from "react-feather";
 
 function App() {
   const myRef = useRef(null);
@@ -48,12 +48,6 @@ function App() {
   ];
 
   const handleSubmit = () => {
-    console.log(name);
-    console.log(phoneNumber);
-    console.log(adress);
-    console.log(radioValue);
-    console.log(radioValue2);
-
     if (name.length && phoneNumber.length && adress.length) {
       if (radioValue === "1") {
         price = 99;
@@ -135,9 +129,10 @@ function App() {
         </Button>
 
         <img src={productImage8} className="App-logo" alt="product" />
-        <img src={productImage9} className="App-logo" alt="product" />
+        <img src={productImage5} className="App-logo" alt="product" />
 
         <div ref={myRef} className="title">
+          <ShoppingCart style={{ marginRight: "10px", color: "white" }} />
           <h1 style={{ color: "white" }}>Sipariş Formu</h1>
         </div>
 
@@ -160,7 +155,9 @@ function App() {
                 }}
                 key={idx}
                 type="radio"
-                variant={radioValue === radio.value ? "success" : "secondary"}
+                variant={
+                  radioValue === radio.value ? "success" : "outline-secondary"
+                }
                 name="radio"
                 value={radio.value}
                 checked={radioValue === radio.value}
@@ -168,7 +165,9 @@ function App() {
               >
                 {radioValue === radio.value ? (
                   <CheckCircle style={{ marginRight: "5px" }} />
-                ) : null}
+                ) : (
+                  <Circle style={{ marginRight: "5px" }} />
+                )}
                 <img
                   src={productImage3}
                   className="Radio-Button-Image"
@@ -279,13 +278,20 @@ function App() {
             <ToggleButton
               key={idx}
               type="radio"
-              variant={radioValue2 === radio.value ? "success" : "secondary"}
+              variant={
+                radioValue2 === radio.value ? "secondary" : "outline-secondary"
+              }
               style={{ margin: "5px" }}
               name="radio"
               value={radio.value}
               checked={radioValue2 === radio.value}
               onChange={(e) => setRadioValue2(e.currentTarget.value)}
             >
+              {radioValue2 === radio.value ? (
+                <CheckCircle style={{ marginRight: "5px" }} />
+              ) : (
+                <Circle style={{ marginRight: "5px" }} />
+              )}
               {radio.name === "Kredi" ? (
                 <p>Kapıda Kredi Kartı</p>
               ) : (
@@ -296,7 +302,7 @@ function App() {
         </ButtonGroup>
 
         <Button
-          style={{ width: "100%", height: "50px", marginBottom: "10px" }}
+          style={{ width: "100%", height: "70px", marginBottom: "10px" }}
           variant="success"
           onClick={handleSubmit}
         >
@@ -368,7 +374,7 @@ function App() {
         </Modal>
 
         <div className="footer">
-          <p>Blah Copyright © 2021</p>
+          <p>Fixo Master Copyright © 2021</p>
         </div>
       </div>
     </div>
