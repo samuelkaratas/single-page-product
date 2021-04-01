@@ -9,6 +9,11 @@ import productImage6 from "./assets/fixo8.jpg";
 import productImage7 from "./assets/fixo7.jpg";
 import productImage8 from "./assets/fixo6.jpg";
 
+import gif1 from "./assets/gif1.gif";
+import gif2 from "./assets/gif2.gif";
+import gif3 from "./assets/gif3.gif";
+import gif4 from "./assets/gif4.gif";
+
 import footerImage from "./assets/footer.png";
 
 import "./App.css";
@@ -105,8 +110,12 @@ function App() {
           Sipariş Ver
         </Button>
 
+        <img src={gif1} className="App-logo" alt="product" />
+
         <img src={productImage2} className="App-logo" alt="product" />
         <img src={productImage3} className="App-logo" alt="product" />
+
+        <img src={gif3} className="App-logo" alt="product" />
 
         <Button
           style={{ marginTop: "5px", marginBottom: "5px" }}
@@ -118,6 +127,7 @@ function App() {
 
         <img src={productImage4} className="App-logo" alt="product" />
         <img src={productImage6} className="App-logo" alt="product" />
+        <img src={gif4} className="App-logo" alt="product" />
         <img src={productImage7} className="App-logo" alt="product" />
 
         <Button
@@ -129,6 +139,7 @@ function App() {
         </Button>
 
         <img src={productImage8} className="App-logo" alt="product" />
+        <img src={gif2} className="App-logo" alt="product" />
         <img src={productImage5} className="App-logo" alt="product" />
 
         <div ref={myRef} className="title">
