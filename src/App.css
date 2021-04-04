@@ -1,7 +1,5 @@
 .Container {
   width: '100%';
-  margin-right: 5px;
-  margin-left: 5px;
 }
 
 .App {
@@ -19,13 +17,14 @@
 }
 
 .App-logo {
-  width: '100%';
+  width: 100vw;
+  max-width: 500px;
   pointer-events: none;
 }
 
 .title {
   display: flex;
-  width: '100%';
+  width: "100%";
   height: 70px;
   background-color: black;
   justify-content: center;
@@ -35,9 +34,24 @@
   margin-bottom: 10px;
 }
 
+.header {
+  display: flex;
+  width: "100%";
+  height: 40px;
+  background-color: black;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.phone {
+  display: flex;
+  flex-direction: row;
+}
+
 .subtitle {
   display: flex;
-  width: '100%';
+  width: "100%";
   height: 70px;
   background-color: #e1e8e8;
   justify-content: center;
@@ -68,7 +82,7 @@
 
 .info {
   display: flex;
-  width: '100%';
+  width: "100%";
   height: 70px;
   background-color: #e1e8e8;
   text-align: center;
@@ -80,10 +94,15 @@
 
 .footer {
   display: flex;
-  width: '100%';
+  width: "100%";
   height: 70px;
   background-color: #e1e8e8;
   text-align: center;
   justify-content: center;
   align-items: center;
+}
+
+.form {
+  margin-left: 5px;
+  margin-right: 5px;
 }
